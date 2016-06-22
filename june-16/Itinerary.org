@@ -1,0 +1,5 @@
+* DONE ArrayList methods of interest
+* DONE Assignment overview and update
+  * KeyMap - toString
+* DONE Worksheet
+* TODO Basic arraylist implementation
