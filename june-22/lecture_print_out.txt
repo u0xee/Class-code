@@ -1,0 +1,76 @@
+public abstract class StringPair implements Comparable<StringPair> {
+    public abstract String first();
+    public abstract String second();
+
+    public String toString() {
+        return String.format("[%s, %s]", first(), second());
+    }
+
+    public boolean equals(Object o) {
+        if(o instanceof StringPair) {
+            StringPair sp = (StringPair) o;
+            return first().equals(sp.first()) &&
+                second().equals(sp.second());
+        }
+        return false;
+    }
+
+    public int compareTo(StringPair other) {
+        int t = first().compareTo(other.first());
+        if(t != 0)
+            return t;
+        return second().compareTo(other.second());
+    }
+}
+
+
+public class StringArrayPair extends StringPair {
+    private final String[] pair;
+    public StringArrayPair(String a, String b){
+        pair = new String[2];
+        pair[0] = a;
+        pair[1] = b;
+    }
+
+    public String first() {
+        return pair[0];
+    }
+
+    public String second() {
+        return pair[1];
+    }
+
+    public static void main(String[] args) {
+        StringPair sp = new StringArrayPair("hello", "world");
+        System.out.println(sp);
+    }
+}
+
+
+public class PersonRecord {
+    public final String firstName;
+    public final String lastName;
+
+    public PersonRecord(String f, String l){
+        firstName = f;
+        lastName = l;
+    }
+}
+
+
+
+public class NamePair extends StringPair {
+    private PersonRecord p;
+
+    public NamePair(PersonRecord p){
+        this.p = p;
+    }
+
+    public String first() {
+        return p.firstName;
+    }
+
+    public String second() {
+        return p.lastName;
+    }
+}

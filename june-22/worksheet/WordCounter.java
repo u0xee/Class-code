@@ -37,7 +37,7 @@ public class WordCounter {
     }
 
     // write an equals and toString with @Override
-    // hint, don't work to hard, leverage HashMap's equals and toString
+    // hint, don't work too hard, leverage HashMap's equals and toString
 
     public String highestCount() {
         // code here to return the highest count String
