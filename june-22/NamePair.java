@@ -1,3 +1,4 @@
+// Adapt PersonRecords to StringPairs
 public class NamePair extends StringPair {
     private PersonRecord p;
 
