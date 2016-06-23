@@ -15,7 +15,7 @@ public class StringArrayPair extends StringPair {
     }
 
     public static void main(String[] args) {
-        StringPair sp = new StringArrayPair("hello", "world");
+        StringPair sp = new StringArrayPair("hello", "world!");
         System.out.println(sp);
     }
 }
